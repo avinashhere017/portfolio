@@ -14,7 +14,7 @@
 <body>
     <header>
         <nav class="contanier">
-            <img class="logo" src="img/logo.png" height="250px" width="250px" alt="">
+            <img class="logo" src="img/logo2.png" height="250px" width="250px" alt="">
             <i id="btn-menu" class="fa-solid fa-bars"></i>
             <div class="nav-links">
                 <a href="#home" class="active">Home</a>
@@ -30,17 +30,17 @@
         <div class="contanier">
             <div class="content">
                 <h4>Hello, I'm</h4>
-                <h1>Avinash</h1>
+                <h1>Avinash Chaurasia</h1>
                 <p>MERN Stack Developer</p>
                 <a href="https://drive.google.com/file/d/1RU1g59JqPRqnsa6H4TY1Rze59sRrcfw1/view?usp=drive_link" class="btn">Download CV</a>
             </div>
-            <a href="https://www.facebook.com/profile.php?id=100004685535760"><i class="fa-brands fa-facebook fa-lg" style="color: #f7f9fd;"></i></a>
-            <a href="https://www.instagram.com/anandkr6355/"><i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i></a>
-            <a href="https://github.com/Anand6355"><i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i></a>
-            <a href="https://www.linkedin.com/in/anand-kumar-a6256720a/"><i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
+            <a href="https://www.facebook.com/avinashhere017" target="_blank"><i class="fa-brands fa-facebook fa-lg" style="color: #f7f9fd;"></i></a>
+            <a href="https://www.instagram.com/avinashhere017/" target="_blank"><i class="fa-brands fa-instagram fa-lg" style="color: #ffffff;"></i></a>
+            <a href="https://github.com/avinashhere017" target="_blank"><i class="fa-brands fa-github fa-lg" style="color: #ffffff;"></i></a>
+            <a href="https://www.linkedin.com/in/avinashhere017/" target="_blank"><i class="fa-brands fa-linkedin fa-lg" style="color: #ffffff;"></i></a>
             
             <div class="hero-img">
-                <img src="img/hero1.jpg" alt="">
+                <img src="img/hero11.jpg" alt="">
             </div>
         </div>
     </div>
@@ -56,7 +56,7 @@
                 <h1>About <span>Me</span></h1>
                 <h3>Developer</h3>
                 <p>My Name Is Avinash Chaurasia
-                    I Am From Gorakhpur ,Uttar Pradesh . I Am Currently Studying In B.Tech From MMMUT Gorakhpur In Electrical Department. My Experties Fields Are Data Structure And Algorithm And Full Stack Developer. My Experties Are On The Language C/C++,Javascript, Sql,Python.
+                    I Am From Gorakhpur ,Uttar Pradesh .I Am Currently Studying In B.Tech From MMMUT Gorakhpur In Electrical Department. My Experties Fields Are Data Structure And Algorithm And Full Stack Developer. My Experties Are On The Language C/C++,Javascript, Sql,Python.
                     
                     In My Free Time , I Usually Play Chess For My Mind Relaxation.I Like The Combination Of My Music Plus With Dsa Problem.</p>
                      <div class="btns">
@@ -117,7 +117,7 @@
 
                 <div class="box">
                     <div class="box-hover">
-                        <span><a href="https://anand6355.github.io/Amazon-web/">Landing Page </a></span>
+                        <span><a href="https://anand6355.github.io/Amazon-web/" target="_blank">Landing Page </a></span>
                         
                     </div>
                     <img src="img/project1.png" alt="">
@@ -166,37 +166,50 @@
     <!-- start Contact -->
 
     <section id="Contact" class="contact">
-        <div class="contanier">
+        <div class="container">
             <div class="sec-top">
-                <h1>Contact <span>Me</span></h1>
+                <h1>Contact<span>Me</span></h1>
             </div>
-
-            <form action="" onsubmit="sendEmail(); reset(); return false;">
-                <input id="firstName" type="text" placeholder="First Name">
-                <input id="lastName" placeholder="Last Name">
-                <input id="phone" placeholder="Phone Number">
-                <input id="email" placeholder="Email Address">
-                <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-                <button class="btn"  type="submit">Send Message</button>
+    
+            <form id="contactForm">
+                <input id="firstName" type="text" placeholder="First Name" name="firstName">
+                <input id="lastName" placeholder="Last Name" name="lastName">
+                <input id="phone" placeholder="Phone Number" name="phone">
+                <input id="email" placeholder="Email Address" name="email">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" name="message"></textarea>
+                <button class="submit btn" type="submit">Send Message</button>
             </form>
+            <div class="message"></div> <!-- Added a div for displaying messages -->
         </div>
     </section>
     <script src="main.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script>
-        function sendEmail(){
-                Email.send({
-                Host : "smtp.gmail.com",
-                Username : "anandkumar6355@gmail.com",
-                Password : "Avinash@123",
-                To : 'anand20_ug@ee.nits.ac.in',
-                From : document.getElementById("email").value,
-                Subject : "New Contact Enquiry",
-                Body : "This is the body"
-            }).then(
-            message => alert(message)
-            );
-        }
+        let url = "https://script.google.com/macros/s/AKfycbwLRbMjRIFELE23v2t5rDtnlaIayrRb3FcIlKPoabFKMKsB1253ngkVF2qytduWt69j/exec";
+        let form = document.getElementById("contactForm"); // Reference the form by its id
+        let submit = form.querySelector(".submit"); // Reference the submit button within the form
+        let message = document.querySelector(".message");
+    
+        // Event listener for the form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submit.textContent = "Submitting..."; // Use textContent to change button text
+    
+            fetch(url, {
+                method: "POST",
+                body: new FormData(form)
+            })
+            .then(res => res.text())
+            .then(data => {
+                message.innerHTML = data;
+                submit.textContent = "Send Message"; // Reset the button text
+                form.reset(); // Optionally reset the form after successful submission
+            })
+            .catch(err => {
+                message.innerHTML = err;
+                submit.textContent = "Send Message"; // Reset the button text on error
+            });
+        });
     </script>
 </body>
 </html>
