@@ -93,6 +93,7 @@ header nav .nav-links a.active{
 
 /* start Hero */
 
+
 .hero{
     padding-top: 80px;
     background: url(img/hero-bg.png);
@@ -128,6 +129,8 @@ header nav .nav-links a.active{
     width: 450px;
     border-radius: 225px;
     }
+
+
  /* start about */ 
 
  .about {
