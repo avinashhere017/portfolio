@@ -1,5 +1,6 @@
 # [Avinash Chaurasia's Portfolio](https://avinashhere017.github.io/portfolio/){:target="_blank"}
 
+
 Welcome to my portfolio's github repository! This portfolio site has been crafted carefully with HTML, CSS, and JavaScript to showcase my skills, projects and expertise areas.
 
 # Overview
