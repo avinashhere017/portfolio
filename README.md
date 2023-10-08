@@ -1,7 +1,6 @@
-# [Avinash Chaurasia's Portfolio](https://avinashhere017.github.io/portfolio/){:target="_blank"}
+# [Avinash Chaurasia's Portfolio](https://avinashhere017.github.io/portfolio/)
 
-
-Welcome to my portfolio's github repository! This portfolio site has been crafted carefully with HTML, CSS, and JavaScript to showcase my skills, projects and expertise areas.
+Welcome to my portfolio's GitHub repository! This portfolio site has been crafted carefully with HTML, CSS, and JavaScript to showcase my skills, projects, and expertise areas.
 
 # Overview
 This portfolio represents my journey as a MERN stack developer based in Uttar Pradesh, currently studying Electrical Engineering B.Tech at MMMUT Gorakhpur. I am proficient in data structures, algorithms, and the languages C/C++, Javascript, SQL, and Python. I also enjoy playing chess in my downtime and relish the combination of music with DSA problems.
