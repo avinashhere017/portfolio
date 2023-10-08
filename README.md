@@ -1,4 +1,4 @@
-# Avinash Chaurasia's Portfolio
+# [Avinash Chaurasia's Portfolio](https://avinashhere017.github.io/portfolio/)
 
 Welcome to my portfolio's github repository! This portfolio site has been crafted carefully with HTML, CSS, and JavaScript to showcase my skills, projects and expertise areas.
 
